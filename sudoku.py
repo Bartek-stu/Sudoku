@@ -93,7 +93,7 @@ class SudokuGUI:
         try:
             if not os.popen("ls ./generator | grep Generator").read().strip():
                 os.system(
-                    "cd generator; g++ DataStruct.cpp Sudoku.cpp InitializeArray.cpp main.cpp -o Generator > /dev/null")
+                    "cd generator; g++ DataStruct.cpp Sudoku.cpp InitializeArray.cpp main.cpp -std=c++11 -o Generator > /dev/null")
         except Exception:
             print("You are not using Unix system, can't check whether generator exists...")
 
